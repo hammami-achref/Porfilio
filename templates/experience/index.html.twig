@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+ 
+  
+{% block content %}
+ <!-- ======= Mobile nav toggle button ======= -->
+  <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex flex-column justify-content-center">
+
+    <nav class="nav-menu">
+      <ul>
+        <li class="active"><a href="/details_personel"> <i class="bx bx-home"></i> <span> Détail Personnel</span></a></li>
+        <li><a href="/profil"><i class="bx bx-user"></i> <span> Profil </span></a></li>
+        <li><a href="/formation"><i class="bx bx-file-blank"></i> <span>Formation</span></a></li>
+       
+        <li><a href="/experience"><i class="bx bx-server"></i> <span>Experience</span></a></li>
+        <li><a href="/competences"><i class="bx bx-envelope"></i> <span>Competences</span></a></li>
+
+         <li><a href="/langues"><i class="bx bx-book-content"></i> <span>Langues</span></a></li>
+         
+         <li><a href="/centre_interet"><i class="bx bx-book-content"></i> <span>Center d'interet</span></a></li>
+      </ul>
+    </nav><!-- .nav-menu -->
+
+  </header><!-- End Header -->
+
+
+  
+    
+  <section id="portfolio" class="portfolio section-bg">
+   
+     
+      <div class="container" data-aos="fade-up">
+ 
+        <div class="section-title">
+          <h2>Créez votre CV professionnel</h2>
+           <h3>  Experience Profissionnel </h3>
+        </div>
+
+        <div class="container">
+
+     {{form_start(f)}}  
+<div class="form-group"> 
+{{form_label(f.poste)}} {{form_widget(f.poste,{'attr':{'class':'form-control'}}) }}  {{form_errors(f.poste)}}
+
+{{form_label(f.employeur)}} {{form_widget(f.employeur,{'attr':{'class':'form-control'}}) }}  {{form_errors(f.employeur)}}
+ 
+{{form_label(f.ville_exp)}} {{form_widget(f.ville_exp,{'attr':{'class':'form-control'}}) }}  {{form_errors(f.ville_exp)}}
+ {{form_label(f.Date_deb_experience)}} {{form_widget(f.Date_deb_experience,{'attr':{'class':'form-control'}}) }}  {{form_errors(f.Date_deb_experience)}}
+ {{form_label(f.Date_fin_experience)}} {{form_widget(f.Date_fin_experience,{'attr':{'class':'form-control'}}) }}  {{form_errors(f.Date_fin_experience)}}
+ {{form_label(f.description)}} {{form_widget(f.description,{'attr':{'class':'form-control'}}) }}  {{form_errors(f.description)}}
+ 
+
+ 
+</div>
+     {{form_end(f)}}
+
+      
+    </section><!-- End Portfolio Section -->
+
+  {% endblock %}
+ 

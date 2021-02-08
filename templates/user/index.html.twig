@@ -1,0 +1,68 @@
+ {% extends 'base.html.twig' %}
+  
+
+
+
+
+  {% block content %}
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex flex-column justify-content-center">
+
+    <nav class="nav-menu">
+      <ul>
+        <li class="active"><a href="/details_personel"> <i class="bx bx-home"></i> <span>Home</span></a></li>
+         <li><a href="/profil"><i class="bx bx-user"></i> <span>Profil</span></a></li>
+     <li><a href="/formation"><i class="bx bx-file-blank"></i> <span>Formation</span></a></li>
+       
+        <li><a href="/experience"><i class="bx bx-server"></i> <span>Experience</span></a></li>
+        <li><a href="/competences"><i class="bx bx-envelope"></i> <span>Competences</span></a></li>
+
+         <li><a href="/langues"><i class="bx bx-book-content"></i> <span>Langues</span></a></li>
+         
+         <li><a href="/centre_interet"><i class="bx bx-book-content"></i> <span>Center d'interet</span></a></li>
+      </ul>
+    </nav><!-- .nav-menu -->
+
+  </header><!-- End Header -->
+
+   <section id="portfolio" class="portfolio section-bg">
+   
+     
+      <div class="container" data-aos="fade-up">
+ 
+        <div class="section-title">
+          <h2>Connexion</h2>
+           <h3>   </h3>
+         </div>
+ 
+
+
+
+  {{form_start(p)}}  
+<div class="form-group"> 
+
+{{form_label(p.description)}} {{form_widget(p.description,{'attr':{'class':'form-control'}}) }}  {{form_errors(p.description)}}$
+
+ {{form_label(p.image)}} {{form_widget(p.image,{'attr':{'class':'form-control'}}) }}  {{form_errors(p.image)}}
+
+ 
+
+</div>
+     {{form_end(p)}}
+
+
+
+
+
+
+      
+    </section><!-- End Portfolio Section -->
+
+
+
+   {% endblock %}
+ 

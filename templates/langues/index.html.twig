@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+ 
+  
+{% block content %}
+ <!-- ======= Mobile nav toggle button ======= -->
+  <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex flex-column justify-content-center">
+
+    <nav class="nav-menu">
+      <ul>
+        <li class="active"><a href="/details_personel"> <i class="bx bx-home"></i> <span> Détail Personnel</span></a></li>
+        <li><a href="/profil"><i class="bx bx-user"></i> <span> Profil </span></a></li>
+        <li><a href="/formation"><i class="bx bx-file-blank"></i> <span>Formation</span></a></li>
+       
+        <li><a href="/experience"><i class="bx bx-server"></i> <span>Experience</span></a></li>
+        <li><a href="/competences"><i class="bx bx-envelope"></i> <span>Competences</span></a></li>
+
+         <li><a href="/langues"><i class="bx bx-book-content"></i> <span>Langues</span></a></li>
+         
+         <li><a href="/centre_interet"><i class="bx bx-book-content"></i> <span>Center d'interet</span></a></li>
+      </ul>
+    </nav><!-- .nav-menu -->
+
+  </header><!-- End Header -->
+
+
+  
+    
+  <section id="portfolio" class="portfolio section-bg">
+   
+     
+      <div class="container" data-aos="fade-up">
+ 
+        <div class="section-title">
+          <h2>Créez votre CV professionnel</h2>
+            <h3>  Langues </h3>
+        </div>
+
+  {{form_start(f)}}  
+<div class="form-group"> 
+
+{{form_label(f.langues)}} {{form_widget(f.langues,{'attr':{'class':'form-control'}}) }}  {{form_errors(f.langues)}}
+ {{form_label(f.niveau_lan)}} {{form_widget(f.niveau_lan,{'attr':{'class':'form-control'}}) }}  {{form_errors(f.niveau_lan)}}
+ 
+
+</div>
+     {{form_end(f)}}
+
+
+ 
+      
+    </section><!-- End Portfolio Section -->
+
+  {% endblock %}
+ 

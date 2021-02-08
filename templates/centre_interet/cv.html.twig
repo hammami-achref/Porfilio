@@ -1,0 +1,139 @@
+ {% extends 'base.html.twig' %}
+  
+ 
+  {% block content %}
+
+
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex flex-column justify-content-center">
+
+    <nav class="nav-menu">
+      <ul>
+        <li class="active"><a href="/details_personel"> <i class="bx bx-home"></i> <span> Détail Personnel</span></a></li>
+        <li><a href="/profil"><i class="bx bx-user"></i> <span>Profil</span></a></li>
+         <li><a href="/formation"><i class="bx bx-file-blank"></i> <span>Formation</span></a></li>
+       
+        <li><a href="/experience"><i class="bx bx-server"></i> <span>Experience</span></a></li>
+        <li><a href="/competences"><i class="bx bx-book-content"></i> <span>Competences</span></a></li>
+
+         <li><a href="/langues"><i class="bx bx-book-content"></i> <span>Langues</span></a></li>
+         
+         <li><a href="/centre_interet"><i class="bx bx-book-content"></i> <span>Center d'interet</span></a></li>
+      </ul>
+    </nav><!-- .nav-menu -->
+
+  </header><!-- End Header -->
+
+   <section id="portfolio" class="portfolio section-bg">
+   
+     
+      <div class="container" data-aos="fade-up">
+ 
+        <div class="section-title">
+          <h2>Votre CV professionnel</h2>
+          
+        </div>
+ 
+      
+   <h2> Details Personel </h2>
+  <hr>
+  <br>
+ {%for list in list %}
+{{list.nom}}<br>
+
+{{list.prenom}}<br>
+
+{{list.telephone}}<br>
+
+{{list.adresse}} <br>
+
+ {%endfor%}
+
+ <hr>
+
+
+<h2> Profil </h2>
+   <hr>
+  <br>
+ {%for list2 in list2%}
+{{list2.description}}<br>
+<img src ="{{asset('uploads/images/' ~ list2.image)}}" alt="" style = "width : 80px: height :80px">
+ 
+   
+ {%endfor%}
+ <hr>
+
+<h2> Formation </h2>
+   <hr>
+  <br>
+  {%for list3 in list3%}
+{{list3.etablissement}}<br>
+
+{{list3.ville}}<br>
+
+{{list3.nIVEAU}}<br>
+
+{%endfor%}
+ <hr>
+
+
+
+<h2> Experience Profissionnel </h2>
+   <hr>
+  <br>
+  {%for list4 in list4%}
+{{list4.poste}}<br>
+
+{{list4.employeur}}<br>
+
+{{list4.ville_exp}}<br>
+
+{{list4.description}}<br>
+
+{%endfor%}
+ <hr>
+
+  
+ 
+<h2>  Competences Technique </h2>
+   <hr>
+  <br>
+  {%for list5 in list5%}
+{{list5.competences}}<br>
+{{list5.niveau_com}}
+{%endfor%}
+ <hr>
+
+  
+<h2>  Langues </h2>
+   <hr>
+  <br>
+  {%for list6 in list6%}
+{{list6.langues}}
+<br>
+{{list6.niveau_lan}}
+{%endfor%}
+ <hr>
+
+ 
+   
+<h2>  Centre d'interet </h2>
+   <hr>
+  <br>
+  {%for list7 in list7%}
+{{list7.loisir}}
+<br>
+{%endfor%}
+ <hr>
+
+
+    </section><!-- End Portfolio Section -->
+
+
+
+   {% endblock %}
+ 
